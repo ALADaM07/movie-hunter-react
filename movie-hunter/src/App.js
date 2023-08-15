@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
 import MainPage from './components/MainPage';
 import MovieDetail from './components/MovieDetail';
 import MovieProvider from './components/MovieProvider';
@@ -18,6 +19,7 @@ function App() {
             <Route path='/movies/:id' element={<MovieDetail />} />
             <Route path='/search-results/:query' element={<SearchResults />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </MovieProvider>

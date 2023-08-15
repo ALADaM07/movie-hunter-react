@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/movie-hunter-react/static/css/main.1e5ac0fb.css",
-    "main.js": "/movie-hunter-react/static/js/main.30296653.js",
-    "static/js/787.5bfabc9c.chunk.js": "/movie-hunter-react/static/js/787.5bfabc9c.chunk.js",
-    "index.html": "/movie-hunter-react/index.html",
-    "main.1e5ac0fb.css.map": "/movie-hunter-react/static/css/main.1e5ac0fb.css.map",
-    "main.30296653.js.map": "/movie-hunter-react/static/js/main.30296653.js.map",
-    "787.5bfabc9c.chunk.js.map": "/movie-hunter-react/static/js/787.5bfabc9c.chunk.js.map"
+    "main.css": "//aladam07.github.io/movie-hunter-react/static/css/main.456b00b6.css",
+    "main.js": "//aladam07.github.io/movie-hunter-react/static/js/main.4a037985.js",
+    "static/js/787.203d0ed0.chunk.js": "//aladam07.github.io/movie-hunter-react/static/js/787.203d0ed0.chunk.js",
+    "index.html": "//aladam07.github.io/movie-hunter-react/index.html",
+    "main.456b00b6.css.map": "//aladam07.github.io/movie-hunter-react/static/css/main.456b00b6.css.map",
+    "main.4a037985.js.map": "//aladam07.github.io/movie-hunter-react/static/js/main.4a037985.js.map",
+    "787.203d0ed0.chunk.js.map": "//aladam07.github.io/movie-hunter-react/static/js/787.203d0ed0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e5ac0fb.css",
-    "static/js/main.30296653.js"
+    "static/css/main.456b00b6.css",
+    "static/js/main.4a037985.js"
   ]
 }

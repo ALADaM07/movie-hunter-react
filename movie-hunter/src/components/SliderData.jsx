@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import MovieContext from './MovieContext';
 import './styles/SliderData.css';
+const SliderData = ({ onPrevClick, onNextClick, fetchSliderMovies }) => {
+  const { movies } = useContext(MovieContext);
 
-const SliderData = ({
-  movies,
-  currentSlide,
-  totalSlides,
-  onPrevClick,
-  onNextClick,
-}) => {
+  useEffect(() => {
+    fetchSliderMovies();
+  }, []);
+
   return (
     <div className='carousel-inner'>
       {movies.map((movie, index) => (

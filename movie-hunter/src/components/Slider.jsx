@@ -3,7 +3,7 @@ import MovieContext from './MovieContext';
 import SliderData from './SliderData';
 
 const Slider = () => {
-  const { movies } = useContext(MovieContext); // Destructure movies from context object
+  const { movies, fetchSliderMovies } = useContext(MovieContext);
   const [currentSlide, setCurrentSlide] = useState(0);
   const totalSlides = Math.ceil(movies.length / 3);
   const startIndex = currentSlide * 3;
@@ -30,6 +30,7 @@ const Slider = () => {
           totalSlides={totalSlides}
           onPrevClick={handlePrevClick}
           onNextClick={handleNextClick}
+          fetchSliderMovies={fetchSliderMovies}
         />
       </div>
     </div>

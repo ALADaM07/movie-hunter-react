@@ -37,7 +37,13 @@ const SearchResults = () => {
           />
           <div className='result-details'>
             <h3 className='result-title'>{movie.title}</h3>
-            <p className='result-overview'>{movie.overview}</p>
+            <p className='release_date'>Release date: {movie.release_date}</p>
+            <p className='popularity'>Popularity: {movie.popularity}</p>
+            <Link
+              to={`/movies/${movie.id}`}
+              className='btn btn-outline-success'>
+              Overview
+            </Link>
           </div>
         </div>
       ))}

@@ -23,6 +23,7 @@ const Slider = () => {
 
   return (
     <div className='container'>
+      <h2 className='text-center p-3'>Upcoming Movies</h2>
       <div id='carouselExampleCaptions' className='carousel slide'>
         <SliderData
           movies={currentMovies}

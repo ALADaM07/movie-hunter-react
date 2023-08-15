@@ -3,7 +3,6 @@ import MovieContext from './MovieContext';
 
 const MovieProvider = ({ children }) => {
   const api_key = process.env.REACT_APP_API_KEY;
-  // const api_key = '0318c8976c241ad5c1dcb503c3697264';
   const cards_api_url = `https://api.themoviedb.org/3/trending/movie/day?language=en-US&api_key=${api_key}`;
   const slider_api_url = `https://api.themoviedb.org/3/movie/upcoming?language=en-US&api_key=${api_key}`;
   const search_api_base_url = `https://api.themoviedb.org/3/search/movie?&include_adult=false&language=en-US&page=1&api_key=${api_key}`;

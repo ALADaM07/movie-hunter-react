@@ -1,17 +1,25 @@
-import React from 'react';
-import MovieProvider from './components/MovieProvider'; // Adjust the import path
-import MoviesList from './components/MoviesList';
+import React, { useState } from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import MainPage from './components/MainPage';
+import MovieDetail from './components/MovieDetail';
+import MovieProvider from './components/MovieProvider';
 import Navbar from './components/Navbar';
-import Slider from './components/Slider';
-
+import SearchResults from './components/SearchResults ';
 function App() {
+  const [searchResults, setSearchResults] = useState([]);
+
   return (
     <MovieProvider>
-      <div className='App'>
-        <Navbar />
-        <Slider />
-        <MoviesList />
-      </div>
+      <Router>
+        <div className='App'>
+          <Navbar setSearchResults={setSearchResults} />
+          <Routes>
+            <Route path='/' element={<MainPage />} />
+            <Route path='/movies/:id' element={<MovieDetail />} />
+            <Route path='/search-results/:query' element={<SearchResults />} />
+          </Routes>
+        </div>
+      </Router>
     </MovieProvider>
   );
 }

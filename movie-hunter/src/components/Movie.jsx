@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Movie = (props) => {
   const { movie } = props;
@@ -15,9 +16,9 @@ const Movie = (props) => {
         <p className='card-text'>Release date: {movie.release_date}</p>
         <p className='card-text'>Vote average: {movie.vote_average}</p>
         <p className='card-text'>Vote count: {movie.vote_count}</p>
-        <button href='/#' /*{movie.overview}*/ className='btn btn-primary'>
+        <Link to={`/movies/${movie.id}`} className='btn btn-outline-success'>
           Overview
-        </button>
+        </Link>
       </div>
     </div>
   );

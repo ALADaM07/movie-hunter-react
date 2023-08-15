@@ -1,0 +1,27 @@
+.movie-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .movie-detail img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .movie-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .movie-detail p {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .movie-detail .btn {
+    margin-top: 20px;
+  }
+  

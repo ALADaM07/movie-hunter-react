@@ -1,0 +1,16 @@
+const fetch = require('node-fetch');
+
+const url = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization:
+      'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwMzE4Yzg5NzZjMjQxYWQ1YzFkY2I1MDNjMzY5NzI2NCIsInN1YiI6IjY0ZDRjY2I3MDIxY2VlMDBmZjEwMjI5MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.KRSeTnDyUtn7TxGI42WZEw8dCjAXZAYFeQWaW-j20is',
+  },
+};
+
+fetch(url, options)
+  .then((res) => res.json())
+  .then((json) => console.log(json))
+  .catch((err) => console.error('error:' + err));

@@ -1,11 +1,28 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import MovieContext from './MovieContext';
 
-const Navbar = () => {
+const Navbar = ({ setSearchResults }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const { searchMovies } = useContext(MovieContext);
+  const navigate = useNavigate();
+
+  const handleSearch = (event) => {
+    setSearchQuery(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const results = await searchMovies(searchQuery);
+    console.log('Search Results:', results);
+    setSearchResults(results);
+    navigate(`/search-results/${searchQuery}`);
+  };
   return (
     <>
       <nav className='navbar navbar-expand-lg bg-body-tertiary'>
         <div className='container-fluid'>
-          <a className='navbar-brand' href='/#'>
+          <a className='navbar-brand' style={{ color: '#6c631a' }} href='/#'>
             Movie Hunter !!
           </a>
           <button
@@ -50,7 +67,9 @@ const Navbar = () => {
                       Drama
                     </a>
                   </li>
-                  <li>{/* <hr className='dropdown-divider' /> */}</li>
+                  <li>
+                    <hr className='dropdown-divider' />
+                  </li>
                   <li>
                     <a className='dropdown-item' href='/#'>
                       racing
@@ -59,12 +78,13 @@ const Navbar = () => {
                 </ul>
               </li>
             </ul>
-            <form className='d-flex' role='search'>
+            <form className='d-flex' onSubmit={handleSubmit}>
               <input
                 className='form-control me-2'
                 type='search'
                 placeholder='Search'
-                aria-label='Search'
+                value={searchQuery}
+                onChange={handleSearch}
               />
               <button className='btn btn-outline-success' type='submit'>
                 Search

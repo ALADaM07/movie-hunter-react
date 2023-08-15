@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Movie Hunter App Project Overview
 
 ## Introduction
@@ -46,5 +46,3 @@ The app will integrate the [TMDB API](https://developer.themoviedb.org/docs) as 
 ## Conclusion
 The Movie Hunter App aims to provide a seamless movie browsing experience, focusing on core functionalities while considering future feature enhancements.
 
->>>>>>> 7d253809586af2866644983487ca766d04c4cc30
-`

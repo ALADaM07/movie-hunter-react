@@ -17,7 +17,9 @@ const Navbar = ({ setSearchResults }) => {
     console.log('Search Results:', results);
     setSearchResults(results);
     navigate(`/search-results/${searchQuery}`);
+    setSearchQuery('');
   };
+
   return (
     <>
       <nav className='navbar navbar-expand-lg bg-body-tertiary'>
@@ -44,7 +46,7 @@ const Navbar = ({ setSearchResults }) => {
               </li>
               <li className='nav-item'>
                 <a className='nav-link' href='/#'>
-                  contact
+                  Contact
                 </a>
               </li>
               <li className='nav-item dropdown'>
@@ -72,7 +74,7 @@ const Navbar = ({ setSearchResults }) => {
                   </li>
                   <li>
                     <a className='dropdown-item' href='/#'>
-                      racing
+                      About
                     </a>
                   </li>
                 </ul>
